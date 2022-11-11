@@ -10,22 +10,16 @@
   }
 },
 {
-  "name": "pages-plugin-twind",
-  "version": "0.0.1",
-  "main": "index.js",
-  "files": [
-    "index.js",
-    "index.d.ts",
-    "tsconfig.json"
-  ],
+  "name": "pages-plugins-example",
+  "private": true,
+  "version": "1.0.0",
   "scripts": {
-    "build": "wrangler pages functions build --plugin --outfile index.js"
-  },
-  "dependencies": {
-    "twind": "^0.16.17"
+    "build": "wrangler pages functions build --outfile static/_worker.js",
+    "start": "wrangler pages dev static -k KV"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.10.0",
     "wrangler": "2"
   }
 }
+
