@@ -8,4 +8,24 @@
     "dev": "tailwindcss -i ./src/style-input.css -o ./public/style.css --watch",
     "build": "rm -rf ./public/style.css; npx tailwindcss -i ./src/style-input.css -o ./public/style.css --minify"
   }
+},
+{
+  "name": "pages-plugin-twind",
+  "version": "0.0.1",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "tsconfig.json"
+  ],
+  "scripts": {
+    "build": "wrangler pages functions build --plugin --outfile index.js"
+  },
+  "dependencies": {
+    "twind": "^0.16.17"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^3.10.0",
+    "wrangler": "2"
+  }
 }
